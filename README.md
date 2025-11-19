@@ -116,6 +116,8 @@ ots/detail.jpg)
 ![Cart & Wishlist](./screens<img width="1916" height="1014" alt="Screenshot from 2025-11-19 16-54-35" src="https://github.com/user-attachments/assets/fb0aabf8-40a9-4e7a-b539-15f42138cea3" />
 hots/cart.jpg)
 <img width="535" height="998" alt="Screenshot from 2025-11-19 16-55-09" src="https://github.com/user-attachments/assets/cad8b915-6521-4f7b-ad9e-59d7c8b2132c" />
+<img width="1916" height="1014" alt="Screenshot from 2025-11-19 16-54-12" src="https://github.com/user-attachments/assets/2114127c-26eb-4c12-a6a7-350037c4ebfe" />
+
 
 📌 Future Enhancements
 
