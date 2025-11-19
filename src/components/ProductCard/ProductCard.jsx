@@ -12,23 +12,29 @@ export default function ProductCard({ product }) {
 
   return (
     <div className={styles.card}>
+      {/* 1. Image Section */}
       <Link to={`/product/${product.id}`} className={styles.imageWrap}>
         <img src={product.image} alt={product.title} />
       </Link>
 
+      {/* 2. Wishlist Button (Top Right) */}
       <button
         className={styles.wishBtn}
         aria-label="Add to wishlist"
-        onClick={() => toggleWishlist(product)}
+        onClick={(e) => {
+            e.preventDefault(); // Prevent navigating to product page when clicking heart
+            toggleWishlist(product);
+        }}
       >
         {isWishlisted(product.id) ? "♥" : "♡"}
       </button>
 
+      {/* 3. Meta Info (Bottom Left) */}
       <div className={styles.meta}>
         <div className={styles.price}>
           {price.symbol}{price.amount}
         </div>
-        <div className={styles.category}>{product.category}</div>
+        <div className={styles.category}>{product.title || product.category}</div>
       </div>
     </div>
   );

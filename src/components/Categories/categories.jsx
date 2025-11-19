@@ -49,7 +49,7 @@ export default function ShopByCategory() {
         </div>
         <div className={styles.centerCol}>
           <a href={categories[1].link} className={styles.tileTall}>
-            <img src={categories[1].img} alt="Earrings" />
+            <img  src={categories[1].img} alt="Earrings" />
             <span className={styles.label}>{categories[1].label}</span>
           </a>
         </div>
