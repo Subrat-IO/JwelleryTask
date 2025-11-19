@@ -1,16 +1,122 @@
-# React + Vite
+💍✨ Jewellery E-Commerce – React (UI-Heavy, Local Auth, Cart, Wishlist)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium jewellery shopping website built using React JS, designed with luxurious UI, animations, responsiveness, and local storage persistence.
+This project simulates a full e-commerce experience:
 
-Currently, two official plugins are available:
+✨ Fully Responsive + Scroll Reveal Animations + Local Auth + Wishlist + Cart + Product Detail + Search
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌟 Features
+Feature	Description
+💎 Luxury UI	High-end jewelry theme with animations & elegant typography
+🛒 Add to Cart (Local Storage)	Persistent cart with quantity updates
+💖 Wishlist Storage	Save favorite items forever (until deleted)
+🔐 Signup / Login System	LocalStorage authentication
+🔎 Search Feature	Global product search page
+🧾 Product Detail Page	Individual product preview
+🖼 Premium Product Cards	Images, price, hover, heart icon, add buttons
+📌 Scroll Reveal Animations	Intersection Observer section reveal
+🎠 Carousel + Shape Slider	Swiper + Custom animation carousel
+📱 Fully Responsive	Mobile/Tablet/Desktop optimized
+🛠 Tech Stack
+Frontend	UI & Utils	Storage
+⚛️ React JS	🎨 CSS Modules	📦 LocalStorage
+🖼 JSX	🎭 Swiper.js	🔑 Browser Auth
+💠 Custom Hooks	🔥 React Icons	🧾 Mock Data
+📦 Project Structure
+📦 src
+│── 🖼 assets/               # Images, icons
+│── 📂 api/                  # Mock API / fetch calls
+│── 🎨 components/
+│   │── Blogs/
+│   │── Categories/
+│   │── Footer/
+│   │── Header/
+│   │── ProductCard/
+│   │── SearchBar/
+│   │── swiper/
+│   │── Toast/
+│── 🔐 contexts/             # Cart, Wishlist, Auth Contexts
+│── 📄 pages/
+│   │── Cart/
+│   │── Home/
+│   │── Login/
+│   │── OwnPage/
+│   │── ProductDetail/
+│   │── SearchResults/
+│   │── Signup/
+│   │── Wishlist/
+│── ⚙️ utils/                # Helpers, storage handlers
+│── App.jsx                  # App root + routes
+│── main.jsx                 # React entry point
+│── App.css / index.css
 
-## React Compiler
+🚀 Installation & Setup
+# Clone repository
+git clone https://github.com/<your-username>/<repository-name>.git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Move into project
+cd JewelleryTask
 
-## Expanding the ESLint configuration
+# Install packages
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Start development server
+npm run dev
+
+🔐 Authentication Overview
+
+Users register → stored in localStorage
+
+Login persists until logout
+
+Validations for empty/invalid fields
+
+localStorage.setItem("user", JSON.stringify(userData));
+
+🛒 Cart & 💖 Wishlist Logic
+
+Stores items in localStorage
+
+Persists even after page reload
+
+Can remove/update items
+
+localStorage.setItem("cart", JSON.stringify(cartItems));
+localStorage.setItem("wishlist", JSON.stringify(wishlistItems));
+
+✨ Scroll Reveal Animation (Code)
+useEffect(() => {
+  const elements = document.querySelectorAll(".scrollReveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach((el) => observer.observe(el));
+  return () => observer.disconnect();
+}, []);
+
+🎠 Sliders Used
+Component	Library
+Diamonds Section	Swiper.js
+Shape Slider	Custom Carousel
+🎨 Screenshots (UI Heavy Project)
+
+Suggestion: Add minimum 3–4 images here manually on GitHub.
+
+![Home Page](./screenshots/home.jpg)
+![Product Detail](./screenshots/detail.jpg)
+![Cart & Wishlist](./screenshots/cart.jpg)
+
+📌 Future Enhancements
+
+🔄 Backend Integration (Node + MongoDB)
+
+💳 Payment Gateway (Razorpay / Stripe)
+
+⭐ Product Ratings + Reviews
+
+🧾 Order History + Invoice
+
+🛍 Advanced Filter & Sorting
