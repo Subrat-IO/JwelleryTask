@@ -120,13 +120,3 @@ hots/cart.jpg)
 
 
 📌 Future Enhancements
-
-🔄 Backend Integration (Node + MongoDB)
-
-💳 Payment Gateway (Razorpay / Stripe)
-
-⭐ Product Ratings + Reviews
-
-🧾 Order History + Invoice
-
-🛍 Advanced Filter & Sorting
