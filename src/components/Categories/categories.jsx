@@ -9,7 +9,7 @@ const categories = [
   },
   {
     label: "EARRINGS",
-    img: "src/assets/-bbdr1ix4.jpg",
+    img: "/assets/-bbdr1ix4.jpg",
     link: "/category/earrings",
   },
   {

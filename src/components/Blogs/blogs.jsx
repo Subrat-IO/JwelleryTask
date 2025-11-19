@@ -7,13 +7,13 @@ export default function RecentBlogs() {
 
       <BlogsContainer>
         <BlogCard>
-          <img src="/src/assets/OurStory.png" alt="Know our story" />
+          <img src="/assets/OurStory.png" alt="Know our story" />
           <Date>07 June, 2025</Date>
           <Title>KNOW OUR STORY</Title>
         </BlogCard>
 
         <BlogCard>
-          <img src="/src/assets/Behind.png" alt="Behind the designs" />
+          <img src="/assets/Behind.png" alt="Behind the designs" />
           <Date>12 June, 2025</Date>
           <Title>BEHIND THE DESIGNS</Title>
         </BlogCard>
@@ -21,22 +21,22 @@ export default function RecentBlogs() {
 
       <Features>
         <FeatureItem>
-          <img src="/src/assets/Screenshot from 2025-11-19 16-15-29.png" alt="" />
+          <img src="/assets/Screenshot from 2025-11-19 16-15-29.png" alt="" />
           <p>IGI/GIA CERTIFIED</p>
         </FeatureItem>
 
         <FeatureItem>
-          <img src="/src/assets/Screenshot from 2025-11-19 16-15-35.png" alt="" />
+          <img src="/assets/Screenshot from 2025-11-19 16-15-35.png" alt="" />
           <p>FREE & FAST<br />WORLDWIDE SHIPPING</p>
         </FeatureItem>
 
         <FeatureItem>
-          <img src="/src/assets/Screenshot from 2025-11-19 16-15-40.png" alt="" />
+          <img src="/assets/Screenshot from 2025-11-19 16-15-40.png" alt="" />
           <p>ETHICALLY SOURCED<br />MATERIALS</p>
         </FeatureItem>
 
         <FeatureItem>
-          <img src="/src/assets/Screenshot from 2025-11-19 16-15-44.png" alt="" />
+          <img src="/assets/Screenshot from 2025-11-19 16-15-44.png" alt="" />
           <p>LIFETIME WARRANTY<br />AND SUPPORT</p>
         </FeatureItem>
       </Features>

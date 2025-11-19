@@ -14,12 +14,12 @@ export default function ShapeSlider() {
   };
 
   const shapes = [
-    { name: "ROUND", img: "/src/assets/Screenshot from 2025-11-19 16-22-44.png" },
-    { name: "HEART", img: "/src/assets/Screenshot from 2025-11-19 16-22-50.png" },
-    { name: "RADIANT", img: "/src/assets/radiant.png" },
-    { name: "PRINCESS", img: "/src/assets/princess.png" },
-    { name: "PEAR", img: "/src/assets/pear.png" },
-    { name: "OVAL", img: "/src/assets/oval.png" },
+    { name: "ROUND", img: "/assets/Screenshot from 2025-11-19 16-22-44.png" },
+    { name: "HEART", img: "/assets/Screenshot from 2025-11-19 16-22-50.png" },
+    { name: "RADIANT", img: "/assets/radiant.png" },
+    { name: "PRINCESS", img: "/assets/princess.png" },
+    { name: "PEAR", img: "/assets/pear.png" },
+    { name: "OVAL", img: "/assets/oval.png" },
   ];
 
   return (
