@@ -47,51 +47,7 @@ const PRODUCTS = [
     image: "https://www.shutterstock.com/image-photo/natural-stone-ring-on-elegant-600nw-2478182559.jpg",
     description: "Bold signet style ring with subtle engraving."
   },
-   {
-    id: "p5",
-    title: "Signet Ring",
-    priceUSD: 650,
-    shape: "square",
-    metal: "silver",
-    image: "https://www.shutterstock.com/image-photo/natural-stone-ring-on-elegant-600nw-2478182559.jpg",
-    description: "Bold signet style ring with subtle engraving."
-  },
-   {
-    id: "p5",
-    title: "Signet Ring",
-    priceUSD: 650,
-    shape: "square",
-    metal: "silver",
-    image: "https://www.shutterstock.com/image-photo/natural-stone-ring-on-elegant-600nw-2478182559.jpg",
-    description: "Bold signet style ring with subtle engraving."
-  },
-   {
-    id: "p5",
-    title: "Signet Ring",
-    priceUSD: 650,
-    shape: "square",
-    metal: "silver",
-    image: "https://www.shutterstock.com/image-photo/natural-stone-ring-on-elegant-600nw-2478182559.jpg",
-    description: "Bold signet style ring with subtle engraving."
-  },
-   {
-    id: "p5",
-    title: "Signet Ring",
-    priceUSD: 650,
-    shape: "square",
-    metal: "silver",
-    image: "https://www.shutterstock.com/image-photo/natural-stone-ring-on-elegant-600nw-2478182559.jpg",
-    description: "Bold signet style ring with subtle engraving."
-  },
-   {
-    id: "p5",
-    title: "Signet Ring",
-    priceUSD: 650,
-    shape: "square",
-    metal: "silver",
-    image: "https://www.shutterstock.com/image-photo/natural-stone-ring-on-elegant-600nw-2478182559.jpg",
-    description: "Bold signet style ring with subtle engraving."
-  }
+  
 ];
 
 const delay = (ms = 300) => new Promise((r) => setTimeout(r, ms));

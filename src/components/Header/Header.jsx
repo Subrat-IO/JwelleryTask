@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 import styles from "./Header.module.css";
 import {
   FaFacebookF,
@@ -19,6 +21,8 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [userDropdown, setUserDropdown] = useState(false);
   const userRef = useRef(null);
+  const { currency, setCurrency } = useContext(CurrencyContext);
+
 
   useEffect(() => {
     function handleClick(e) {
@@ -43,10 +47,27 @@ export default function Header() {
           <a href="#"><FaYoutube /></a>
         </div>
         <div className={styles.topMid}>SIGNUP AND GET 10% OFF</div>
-        <div className={styles.topRight}>
-          <FaGlobe style={{ marginRight: 4 }} />
-          IND
-        </div>
+       <div className={styles.topRight}>
+  <FaGlobe style={{ marginRight: 4 }} />
+
+  <select
+    value={currency}
+    onChange={(e) => setCurrency(e.target.value)}
+    style={{
+      background: "transparent",
+      color: "#e4cfcfff",
+      border: "none",
+      outline: "none",
+      fontSize: 13,
+      cursor: "pointer"
+    }}
+  >
+    <option value="USD">$ USD</option>
+    <option value="INR">₹ INR</option>
+    <option value="EUR">€ EUR</option>
+  </select>
+</div>
+
       </div>
 
       {/* MAIN BAR */}

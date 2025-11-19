@@ -17,6 +17,7 @@ export const TopSection = styled.div`
   display: flex;
   gap: 60px;
   align-items: center;
+  
   justify-content: center;
 
   @media (max-width: 900px) {
@@ -93,13 +94,48 @@ export const ReviewHeading = styled.h2`
 
 export const ReviewSlider = styled.div`
   width: 100%;
-  .diamondSwiper img {
+
+  /* Base video styles */
+  .diamondSwiper .reviewVid {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, height 0.35s ease;
   }
+
+  /* Small side previews */
+  .diamondSwiper .swiper-slide:not(.swiper-slide-active) .reviewVid {
+    height: 320px;
+    transform: scale(0.88);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    opacity: 0.75;
+  }
+
+  /* Center reel highlight */
+  .diamondSwiper .swiper-slide-active .reviewVid {
+    height: 460px;
+    transform: scale(1.06);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    z-index: 10;
+  }
+
+  /* Arrows */
   .swiper-button-prev,
   .swiper-button-next {
     color: #3d2f2b;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 18px 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(180, 150, 150, 0.25);
+    transition: 0.3s;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: #3d2f2b;
+    color: white;
   }
 `;

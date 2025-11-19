@@ -12,21 +12,21 @@ export default function ProductCard({ product }) {
 
   return (
     <div className={styles.card}>
-      <div className={styles.imageWrap}>
-        <Link to={`/product/${product.id}`}>
-          <img src={product.image} alt={product.title} />
-        </Link>
-        <button
-          className={styles.wishBtn}
-          aria-label="Add to wishlist"
-          onClick={() => toggleWishlist(product)}
-        >
-          {isWishlisted(product.id) ? "♥" : "♡"}
-        </button>
-      </div>
+      <Link to={`/product/${product.id}`} className={styles.imageWrap}>
+        <img src={product.image} alt={product.title} />
+      </Link>
+
+      <button
+        className={styles.wishBtn}
+        aria-label="Add to wishlist"
+        onClick={() => toggleWishlist(product)}
+      >
+        {isWishlisted(product.id) ? "♥" : "♡"}
+      </button>
+
       <div className={styles.meta}>
         <div className={styles.price}>
-          {price.currency} {price.amount}
+          {price.symbol}{price.amount}
         </div>
         <div className={styles.category}>{product.category}</div>
       </div>

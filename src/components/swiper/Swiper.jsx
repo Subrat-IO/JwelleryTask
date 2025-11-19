@@ -4,6 +4,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import styles from "./style.module.css";
+
+const videoTestimonials = [
+  {
+    src: "videos/219228.mp4",
+    name: "Alice Johnson",
+    text: "Can you guess which one has natural diamonds? Natural VS Lab-grown.",
+  },
+  {
+    src: "videos/146131-788410158.mp4",
+    name: "Ravi Shah",
+    text: "Your go-to diamond necklace every single day.",
+  },
+  {
+    src: "videos/8246552-hd_1920_1080_25fps.mp4",
+    name: "Julia Kim",
+    text: "Breathtaking cut. Love my diamond ring.",
+  },
+  {
+    src: "videos/6570503-hd_1080_1920_25fps.mp4",
+    name: "Priya Desai",
+    text: "Absolutely stunning! Highly recommended.",
+  },
+];
 
 /* ----------------- COMPONENT ----------------- */
 
@@ -13,8 +37,10 @@ export default function DiamondsSection() {
       {/* TOP SECTION */}
       <TopSection>
         <ImageBox>
-          {/* Put diamond-lab.jpg in public/images OR change path to import */}
-          <img src="https://img.tatacliq.com/images/i13/437Wx649H/MP000000019389113_437Wx649H_202309242235462.jpeg" alt="Lab grown diamonds" />
+          <img
+            src="https://img.tatacliq.com/images/i13/437Wx649H/MP000000019389113_437Wx649H_202309242235462.jpeg"
+            alt="Lab grown diamonds"
+          />
         </ImageBox>
 
         <Content>
@@ -32,21 +58,38 @@ export default function DiamondsSection() {
 
       <ReviewSlider>
         <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          navigation
           modules={[Navigation]}
-          className="diamondSwiper"
+          navigation
+          centeredSlides={true}
+          slidesPerView={3}
+          spaceBetween={40}
+          className={styles.diamondSwiper}
           breakpoints={{
-            0: { slidesPerView: 1.1, spaceBetween: 16 },
+            0: { slidesPerView: 1.15, spaceBetween: 16 },
             640: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 40 },
           }}
         >
-          <SwiperSlide><img src="https://m.media-amazon.com/images/I/81rwLRrgVpL._AC_UY1100_.jpg" alt="review 1" /></SwiperSlide>
-          <SwiperSlide><img src="https://m.media-amazon.com/images/I/71Q8QHFEwQL._AC_UY1100_.jpg" alt="review 2" /></SwiperSlide>
-          <SwiperSlide><img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwba4027ef/images/hi-res/50D3I3FKSAA02_1.jpg?sw=480&sh=480" alt="review 3" /></SwiperSlide>
-          <SwiperSlide><img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwcfbf242b/images/hi-res/502213FOSAA02_1.jpg?sw=640&sh=640" alt="review 4" /></SwiperSlide>
+          {videoTestimonials.map((review, idx) => (
+            <SwiperSlide key={idx}>
+              <VideoBox>
+                <video
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  className={styles.reviewVid}
+                >
+                  <source src={review.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <Caption>
+                  <ReviewText>{review.text}</ReviewText>
+                  <Reviewer>{review.name}</Reviewer>
+                </Caption>
+              </VideoBox>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </ReviewSlider>
     </Wrapper>
@@ -162,4 +205,49 @@ const ReviewSlider = styled.div`
   .swiper-button-next {
     color: #3d2f2b;
   }
+`;
+
+const VideoBox = styled.div`
+  position: relative;
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  background: #f9f6f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+`;
+
+const Caption = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(52, 41, 38, 0.55);
+  padding: 18px 18px 12px 18px;
+  color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+`;
+
+const ReviewText = styled.div`
+  font-size: 1.08rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+`;
+
+const Reviewer = styled.div`
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.8;
 `;

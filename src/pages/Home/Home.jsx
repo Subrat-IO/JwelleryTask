@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Home.module.css";
 import { fetchProducts } from "../../api/mockApi";
-import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductCard from "../../components/ProductCard/ProductCard.jsx";
 import ShopByCategory from "../../components/Categories/categories";
 import heroImg from "/assets/jewellery-1723637.jpg"; // FIXED 👍
 import ShapeSlider from "../ShapeSlider/ShapreSlider";
