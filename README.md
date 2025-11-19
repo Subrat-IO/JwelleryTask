@@ -23,6 +23,9 @@ Frontend	UI & Utils	Storage
 🖼 JSX	🎭 Swiper.js	🔑 Browser Auth
 💠 Custom Hooks	🔥 React Icons	🧾 Mock Data
 📦 Project Structure
+
+
+
 📦 src
 │── 🖼 assets/               # Images, icons
 │── 📂 api/                  # Mock API / fetch calls
