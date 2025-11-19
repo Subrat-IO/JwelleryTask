@@ -1,0 +1,242 @@
+:root {
+  --maroon: #82021d;
+  --brand-sand: #eeebe3;
+  --icon-hover: #82021d;
+}
+
+/* OVERALL HEADER */
+.headerWrapper {
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1110;
+  box-shadow: 0 3px 12px rgba(30,30,30,0.03);
+}
+
+/* TOP BAR */
+.topBar {
+  width: 100%;
+  height: 30px;
+  background: var(--maroon);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+}
+.topLeft a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 15px;
+  transition: 0.2s;
+}
+.topLeft a:last-child { margin-right: 0; }
+.topLeft a:hover { color: #ffd600; }
+.topMid {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  font-size: 13.2px;
+  letter-spacing: 0.04em;
+}
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+}
+
+/* MAIN BAR (everything in one row mobile/desktop) */
+.brandBar {
+  width: 100%;
+  background: var(--brand-sand);
+  display: flex;
+  min-height: 65px;
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+.brandBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 78px;
+}
+.brandBarCenter {
+  flex: 1;
+  text-align: center;
+}
+.brandBarRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 110px;
+  justify-content: flex-end;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 2.05rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #191816;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ICONS */
+.actionIcon {
+  font-size: 1.35em;
+  color: #191816;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 1px;
+  transition: color 0.18s;
+}
+.actionIcon:hover {
+  color: var(--icon-hover);
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  margin-right: 7px;
+  cursor: pointer;
+}
+@media (max-width: 650px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+
+/* USER DROPDOWN */
+.userWrapper {
+  position: relative;
+  display: inline-block;
+}
+.userDropdown {
+  position: absolute;
+  top: 40px;
+  right: -6px;
+  background: white;
+  min-width: 110px;
+  border: 1px solid #eee;
+  border-radius: 7px;
+  box-shadow: 0 5px 18px rgba(30,17,30,0.13);
+  z-index: 1;
+  animation: fadeDrop 0.22s ease;
+}
+@keyframes fadeDrop {
+  0% { opacity: 0; transform: translateY(-9px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.userDropdown a {
+  display: block;
+  padding: 11px 18px;
+  color: #222;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid #f6eee2;
+}
+.userDropdown a:last-child {
+  border-bottom: none;
+}
+.userDropdown a:hover {
+  background: #f3efec;
+  color: var(--maroon);
+}
+
+/* NAVIGATION */
+.navBar {
+  width: 100%;
+  background: var(--brand-sand);
+  border-top: 1px solid #e1ddd8;
+  border-bottom: 1px solid #efe5e2;
+  box-shadow: 0 2px 8px rgba(206,182,146,0.07);
+  overflow: hidden;
+  transition: max-height 0.33s;
+}
+.navList {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  padding: 14px 0;
+  list-style: none;
+  margin: 0;
+}
+.navList li a {
+  color: #232323;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  transition: color 0.17s;
+  position: relative;
+}
+.navList li a:hover {
+  color: var(--icon-hover);
+}
+.navList li a:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--maroon);
+  border-radius: 7px;
+  transition: width 0.19s;
+}
+.navList li a:hover:after { width: 100%; }
+
+/* MOBILE: single row header, menu drops below */
+@media (max-width: 650px) {
+  .brandBar {
+    padding: 0 3px;
+    min-height: 52px;
+    height: 52px;
+  }
+  .brandBarLeft,
+  .brandBarRight {
+    min-width: 55px;
+    gap: 10px;
+  }
+  .brand {
+    font-size: 1.25rem;
+    letter-spacing: 0.09em;
+  }
+  .actionIcon {
+    font-size: 1.1em;
+  }
+  .brandBarCenter {
+    flex: 1;
+    text-align: center;
+  }
+  /* Navbar collapses and animates open below header */
+  .navBar {
+    max-height: 0;
+    padding: 0;
+    transition: max-height 0.32s;
+  }
+  .navOpen {
+    max-height: 360px;
+  }
+  .navList {
+    flex-direction: column;
+    padding: 0 0 6px 0;
+    gap: 0;
+  }
+  .navList li {
+    width: 100vw;
+    text-align: center;
+    padding: 13px 0;
+    border-top: 1px solid #e6dfd9;
+    font-size: 15.8px;
+  }
+}
+

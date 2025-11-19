@@ -1,0 +1,113 @@
+.card {
+  background: #fff;
+  border: 1px solid #f4f4f4;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .23s cubic-bezier(0.32, 0.72, 0.43, 1.16), box-shadow .18s;
+  cursor: pointer;
+  min-width: 290px;
+  max-width: 370px;
+  min-height: 395px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 24px 56px rgba(60,0,44,0.10);
+}
+
+/* IMAGE */
+.imageWrap {
+  background: #fcfcfd;
+  position: relative;
+  height: 285px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #f5f5fc;
+}
+
+.imageWrap img {
+  width: 100%;
+  max-height: 210px;
+  object-fit: contain;
+  display: block;
+  padding: 34px 28px;
+  background: transparent;
+  transition: transform .29s cubic-bezier(0.8, 0.2, 0.17, 1.05);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* WISHLIST BUTTON */
+.wishBtn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 21.5px;
+  background: rgba(255,255,255,0.94);
+  border: 1.2px solid #f2e6ef;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .17s, transform .19s;
+  color: #b6a3ad;
+  z-index: 1;
+  outline: none;
+}
+
+.wishBtn:hover, .wishBtn:active {
+  background: #fff;
+  color: #c70039;
+  border: 1.5px solid #fae4f3;
+  transform: scale(1.10);
+}
+
+/* META AREA */
+.meta {
+  padding: 18px 18px 26px 18px;
+  text-align: left;
+  background: #fff;
+}
+
+.price {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #c70039;
+  letter-spacing: 0.12em;
+  margin-bottom: 7px;
+}
+
+.category {
+  font-size: 13px;
+  color: #8e8e8e;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .card {
+    min-width: 220px;
+    max-width: 99vw;
+    min-height: 290px;
+  }
+  .imageWrap {
+    height: 180px;
+  }
+  .imageWrap img {
+    max-height: 125px;
+    padding: 19px 10px;
+  }
+  .meta { padding: 9px 8px 15px 13px; }
+  .price { font-size: 14px; }
+  .category { font-size: 11px; }
+}
