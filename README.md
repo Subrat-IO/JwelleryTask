@@ -56,7 +56,7 @@ Frontend	UI & Utils	Storage
 
 🚀 Installation & Setup
 # Clone repository
-git clone https://github.com/<your-username>/<repository-name>.git
+git clone git](https://github.com/Subrat-IO/JwelleryTask.git)
 
 # Move into project
 cd JewelleryTask
@@ -109,9 +109,13 @@ Shape Slider	Custom Carousel
 
 Suggestion: Add minimum 3–4 images here manually on GitHub.
 
-![Home Page](./screenshots/home.jpg)
-![Product Detail](./screenshots/detail.jpg)
-![Cart & Wishlist](./screenshots/cart.jpg)
+![Home Page](./scre<img width="1916" height="1014" alt="Screenshot from 2025-11-19 16-54-29" src="https://github.com/user-attachments/assets/aa1ba6ac-0040-4581-8af1-92b79f0e1d5b" />
+enshots/home.jpg)
+![Product Detail](./screensh<img width="1916" height="1014" alt="Screenshot from 2025-11-19 16-54-52" src="https://github.com/user-attachments/assets/f653748b-233f-4c85-ab64-0220f4d98dfa" />
+ots/detail.jpg)
+![Cart & Wishlist](./screens<img width="1916" height="1014" alt="Screenshot from 2025-11-19 16-54-35" src="https://github.com/user-attachments/assets/fb0aabf8-40a9-4e7a-b539-15f42138cea3" />
+hots/cart.jpg)
+<img width="535" height="998" alt="Screenshot from 2025-11-19 16-55-09" src="https://github.com/user-attachments/assets/cad8b915-6521-4f7b-ad9e-59d7c8b2132c" />
 
 📌 Future Enhancements
 
