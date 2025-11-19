@@ -27,31 +27,32 @@ Frontend	UI & Utils	Storage
 
 
 📦 src
-│── 🖼 assets/               # Images, icons
-│── 📂 api/                  # Mock API / fetch calls
-│── 🎨 components/
-│   │── Blogs/
-│   │── Categories/
-│   │── Footer/
-│   │── Header/
-│   │── ProductCard/
-│   │── SearchBar/
-│   │── swiper/
-│   │── Toast/
-│── 🔐 contexts/             # Cart, Wishlist, Auth Contexts
-│── 📄 pages/
-│   │── Cart/
-│   │── Home/
-│   │── Login/
-│   │── OwnPage/
-│   │── ProductDetail/
-│   │── SearchResults/
-│   │── Signup/
-│   │── Wishlist/
-│── ⚙️ utils/                # Helpers, storage handlers
-│── App.jsx                  # App root + routes
-│── main.jsx                 # React entry point
-│── App.css / index.css
+├── api/
+│   └── mockApi.js               # Products / fake fetch
+│
+├── assets/                      # Images, logos, banners
+│
+├── components/
+│   ├── Blogs/                   # Recent posts UI
+│   ├── Categories/              # Shop-by-category UI
+│   ├── Footer/
+│   ├── Header/
+│   ├── ProductCard/
+│   ├── SearchBar/
+│   ├── swiper/                  # Diamonds & carousels
+│   └── Toast/                   # Notification system
+│
+├── contexts/                    # Global app states
+│   ├── CartContext.jsx
+│   ├── WishlistContext.jsx
+│   └── AuthContext.jsx
+│
+├── pages/                       # Application pages
+│   ├── Cart/                    # Cart page
+│   ├── Home/                    # Landing page
+│   ├── Login/                   # Login page
+│   ├── OwnPage/                 # Jewelry customization page
+│   ├── Pro
 
 🚀 Installation & Setup
 # Clone repository
