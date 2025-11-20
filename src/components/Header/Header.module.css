@@ -240,3 +240,75 @@
   }
 }
 
+/* =====================
+     SEARCH PANEL BELOW NAV
+===================== */
+.searchPanel {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: #fff;
+  border-bottom: 1px solid #e3ddd6;
+
+  transition: max-height 0.35s ease;
+  padding: 0 14px;
+}
+
+.searchPanelOpen {
+  max-height: 85px;
+  padding: 14px;
+}
+
+.searchPanel input {
+  flex: 1;
+  max-width: 750px;
+  height: 45px;
+
+  border: 1px solid #c9b7a3;
+  border-radius: 6px;
+  padding: 0 14px;
+  background: #f8f4ef;
+
+  font-size: 15px;
+  color: #222;
+  outline: none;
+
+  transition: 
+    box-shadow 0.25s ease,
+    border 0.25s ease;
+}
+
+.searchPanel input:focus {
+  border-color: #82021d;
+  box-shadow: 0 0 8px rgba(130, 2, 29, 0.32);
+}
+
+.closePanel {
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--maroon);
+  transition: transform 0.25s ease;
+}
+
+.closePanel:hover {
+  transform: scale(1.15) rotate(90deg);
+}
+
+/* RESPONSIVE SEARCH PANEL */
+@media (max-width: 650px) {
+  .searchPanelOpen {
+    max-height: 65px;
+    padding: 10px;
+  }
+
+  .searchPanel input {
+    height: 38px;
+    font-size: 14px;
+  }
+}
